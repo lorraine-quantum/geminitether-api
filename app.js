@@ -55,7 +55,7 @@ app.use(
 app.use(express.json());
 app.use(helmet());
 app.use(cors({
-  origin: ['https://geminitether-admin.vercel.app', 'http://localhost:5173', 'http://localhost:3000']
+  origin: ['https://geminitether-admin.vercel.app', 'https://geminitetherchain.com', 'https://admin.geminitetherchain.com']
 }));
 app.use(xss());
 
