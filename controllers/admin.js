@@ -63,7 +63,6 @@ const adminEditSingleUser = async (req, res) => {
     // const user = await User.findOneAndUpdate({
     //   _id:singleTransaction.owner.id,
     // })
-    console.log(req.body, singleUser.tradeProfit)
     if (req.body.tradeProfit === singleUser.tradeProfit) {
       req.body.tradeProfit = 0
     }
@@ -80,6 +79,9 @@ const adminEditSingleUser = async (req, res) => {
         plan: req.body.plan, userCanWithdraw: req.body.userCanWithdraw,
         withdrawalCharges: req.body.withdrawalCharges,
         email: req.body.email,
+        pendBalance:req.body.pendBalance,
+        totalEquity:req.body.totalEquity,
+        totalDeposit:req.body.totalDeposit,
         usdtAddress: req.body.usdtAddress,
         bitcoinAddress: req.body.bitcoinAddress,
         ethereumAddress: req.body.ethereumAddress,
