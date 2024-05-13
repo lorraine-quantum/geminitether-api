@@ -15,9 +15,16 @@ const WithdrawalSchema = new mongoose.Schema(
             type: String,
             required: [true, "please provide reference"],
         },
+        walletAddress: {
+            type: String,
+            required: [true, "please provide wallet address"],
+        },
         amount: {
             type: Number,
             required: [true, "please provide amount"],
+        },
+        charges: {
+            type: Number,
         },
         edited: {
             type: Boolean,
